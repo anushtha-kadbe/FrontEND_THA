@@ -1,0 +1,45 @@
+
+body{
+  background-color: #F6C6EA;
+  background-size: cover;
+  box-sizing: border-box;
+  margin-right: 15%;
+  margin-left: 15%;
+  border-left: 50px;
+
+
+}
+
+h1{
+  color: #FC5404;
+  padding-left: 400px;
+  padding-right: 400px;
+}
+
+h4{
+  color: #AC66CC;
+  font-weight: 800;
+  font-family: sans-serif;
+  
+}
+
+h3{
+  color: #185ADB;
+  word-spacing: 10px;
+}
+
+div{
+  margin-left: 30px;
+  padding-left: 30px;
+}
+ fieldset{
+   display: flex;
+
+   position: relative;
+
+ }
+
+ .mini-heading{
+   font-weight: bolder;
+
+ }
