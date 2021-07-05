@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY</title>
+</head>
+<h3>Question 1</h3>
+<body>
+    <p>Write a JavaScript function to check whether an `input` is an array or not.</p>
+    <script>
+        let a1 = [10,20,30,40,50]
+        let b1 = [8,8,8,8,8]
+  
+         console.log(a1.some(item=>item===40));
+         console.log(b1.some(item=>item===18));
+  
+         console.log(a1.every(item=>item===8));
+         console.log(b1.every (item=>item===8));
+      </script>
+
+    <h3>Question 2</h3>
+    <p>Write a JavaScript function to clone an array.</p>
+    <script>
+        var array = [1,2,4,0]
+        array_Clone = function(array) 
+        {
+            return array.slice(0);
+        };
+        
+            console.log(array_Clone([1,2,4,0]));
+            console.log(array_Clone([1,2,[4,0]]));
+       
+
+    </script>
+
+<h3>Question 3</h3>
+<p>Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
+</p>
+
+<script>
+   let new_array=[3,4,1,6,9]
+   console.log(new_array.filter(item=>item==3));
+   console.log(new_array.slice(0,4));
+   console.log(new_array);
+   console.log(new_array.push(0));
+   console.log(new_array);
+
+</script>
+
+  
+    <h3>Question 4</h3>
+    
+    <p>A simple JavaScript program to join all elements of the following array into a string.</p>
+    <script >
+       var myColor = ["Red", "Blue", "White","Yellow"]
+      
+       console.log(myColor.join());
+       console.log(myColor.join("+"));
+       console.log(myColor.join("___"));
+
+    </script>
+
+    <h3>Question 5</h3>
+    <p>Write a JavaScript program to find the most frequent item of an array.</p>
+    <script>
+        
+        array=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]
+        let x=1;
+        let y=0;
+        let item;
+        for(let i=0; i<array.length; i++)
+        {
+            for(let j=i; j<array.length; j++)
+            {
+                if (array[i]===array[j])
+                y++;
+                if(x<y)
+                {
+                    x=y;
+                    item = array[i];
+
+                }
+            
+        }
+        y=0;
+    }
+    console.log(item +"("+ x +" times"+")");   
+           
+    </script
+
+  
+</body>
+</html>
