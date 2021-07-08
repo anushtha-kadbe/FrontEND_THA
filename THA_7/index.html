@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Question 1</h3>
+    <p> Write a JavaScript program to list the properties of a JavaScript object. Sample object: var student = { name : "David Rayy", sclass : "VI", rollno : 12 }; Sample Output: name,sclass,rollno</p>
+    
+    <script>
+        const Obj1 = {name : 'David Ray'};
+        const Obj2={ sclass : 'VI'};
+        const Obj3={ Rollno : '12'};
+        const Obj4={};
+        Object.assign(Obj4,Obj1,Obj2,Obj3);
+        console.log(Obj4);
+    </script>
+
+    <h3>Question 2</h3>
+    <p>Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.</p>
+    <script>
+       const Obj_1= {name: 'david Ray' , class: 'VI' , RollNo:'12'};
+       const Obj_2={};
+       Object.assign(Obj_2,Obj_1);
+        console.log(Obj_2); //Before Deleting 
+       
+       delete Obj_1 ['RollNo'];
+       console.log(Obj_1);  //After Deleting
+
+    </script>
+
+
+<h3>Question 3</h3>
+<p>Write a JavaScript program to get the length of a JavaScript object.</p>
+   <script>   
+    
+        let student={
+        name : 'David Rayy',
+         sclass : 'VI', 
+         rollno : '12'
+         };
+         let length= Object.keys(student).length;
+        console.log(length);
+   
+</script>
+
+<h3>Question 4</h3>
+<p>Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books.</p>
+<script>
+    var library  = [{ author: 'Bill Gates', title: 'The Road Ahead', readingStatus: true },
+     { author: 'Steve Jobs', title: 'Walter Isaacson', readingStatus: true },
+     { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', readingStatus: false }]
+     for(item in library){
+     console.log(library[item].readingStatus);
+     };
+</script>
+
+<h3>Question 5</h3>
+<p>Write a JavaScript program to get the volume of a Cylinder with four decimal places using object classes.
+    <script>
+       const cylinder = {
+      pi: Math.PI,
+      radius: 5,
+      height: 10,
+      volume: function(){
+          return (this.pi * Math.pow(this.radius, 2) * this.height);
+      }
+  }
+
+  var vol = parseFloat( cylinder.volume().toFixed(4) );
+
+  console.log(vol);
+    </script>
+</p>
+
+<h3>Question 6</h3>
+<p>Write a JavaScript program to sort an array of JavaScript objects.</p>
+<script>
+    var lib_list = [ { title: 'The Road Ahead',
+     author: 'Bill Gates',
+      libraryID: 1254 },
+     { title: 'Walter Isaacson',
+      author: 'Steve Jobs', 
+      libraryID: 4264 }, 
+     { title: 'Mockingjay: The Final Book of The Hunger Games',
+      author: 'Suzanne Collins',
+       libraryID: 3245 }];
+
+       var sortable = [];
+       for(var id in library){
+   sortable.push(library[id]['libraryID']);
+}
+
+sortable.sort((a,b) => a-b);
+
+for (const j in library) {
+   for (var k in library) {
+     if (sortable[j] == (library[k].libraryID)) {
+           console.log(sortable.sort);
+       }
+   }
+}
+</script>
+
+</body>
+</html>
