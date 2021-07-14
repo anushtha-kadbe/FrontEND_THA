@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+//Create 2 object and try to use call, apply and bind on them.
+        
+    <script>
+        //Call
+        const server1 = {
+            serverName:"Devsnest",
+            getInvite:function(a , b) {
+                console.log(this);
+                console.log(a + b);
+            }
+        }
+
+        const server2 = {
+            serverName:"TheDevelopersCommunity",
+            
+        }
+        server1.getInvite.call(server1, 10,20)
+    </script>
+
+    <script>
+        //Apply
+        const server3 = {
+            serverName:"Devsnest",
+            getInvite:function(a , b) {
+                console.log(this);
+                console.log(a + b);
+            }
+        }
+
+        const server4 = {
+            serverName:"TheDevelopersCommunity",
+            
+        }
+        server1.getInvite.call(server3, [10,20]);
+    </script>
+
+    <script>
+        //Bind
+        const server5 = {
+            serverName:"Devsnest",
+        }
+
+        const server6 = {
+            serverName:"TheDevelopersCommunity",
+            
+        }
+        function getInvite(a,b){
+            console.log(this);
+            console.log(a-b);
+        }
+        getInvite.bind(server5,[10,20])
+        
+    </script>
+     
+     
+</body>
+</html>
